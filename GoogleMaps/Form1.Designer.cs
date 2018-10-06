@@ -37,8 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvLocalizacion = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalizacion)).BeginInit();
             this.SuspendLayout();
             // 
             // gmcMapa
@@ -123,6 +123,7 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -133,23 +134,24 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvLocalizacion
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(724, 330);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(202, 114);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvLocalizacion.AllowUserToAddRows = false;
+            this.dgvLocalizacion.AllowUserToDeleteRows = false;
+            this.dgvLocalizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocalizacion.Location = new System.Drawing.Point(724, 330);
+            this.dgvLocalizacion.Name = "dgvLocalizacion";
+            this.dgvLocalizacion.ReadOnly = true;
+            this.dgvLocalizacion.Size = new System.Drawing.Size(202, 114);
+            this.dgvLocalizacion.TabIndex = 4;
+            this.dgvLocalizacion.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SeleccionarRegistro);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvLocalizacion);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label3);
@@ -162,7 +164,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalizacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,7 +181,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLocalizacion;
     }
 }
 
