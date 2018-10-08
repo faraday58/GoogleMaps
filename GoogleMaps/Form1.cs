@@ -85,10 +85,12 @@ namespace GoogleMaps
             dt.Rows.Add(txtbDescripcion.Text, double.Parse(txtbLatitud.Text), double.Parse(txtbLongitud.Text));
         }
 
-        private void gmcMapa_MouseDoubleClick(object sender, MouseEventArgs e)
+       
+
+       
+
+        private void gmcMapa_MouseClick(object sender, MouseEventArgs e)
         {
-
-
             //Obteniendo la latitud y longitud de la posición donde el usuario seleccionó en el mapa
             double latitud = gmcMapa.FromLocalToLatLng(e.X, e.Y).Lat;
             double longitud = gmcMapa.FromLocalToLatLng(e.X, e.Y).Lng;
@@ -100,12 +102,7 @@ namespace GoogleMaps
             marker.Position = new PointLatLng(latitud, longitud);
             gmcMapa.Position = marker.Position;
             marker.ToolTipText = string.Format("Ubicación : \n Latitud: {0} \n Longitud: {1} ", latitud, longitud);
-        }
-
-        private void gmcMapa_DoubleClick(object sender, EventArgs e)
-        {
-            MessageBox.Show("Se ejecuta");
-
+            
         }
     }
 }

@@ -66,7 +66,7 @@
             this.gmcMapa.Size = new System.Drawing.Size(564, 371);
             this.gmcMapa.TabIndex = 0;
             this.gmcMapa.Zoom = 0D;
-            this.gmcMapa.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gmcMapa_MouseDoubleClick);
+            this.gmcMapa.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gmcMapa_MouseClick);
             // 
             // txtbDescripcion
             // 
